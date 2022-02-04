@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img { 
+    max-width:100%
+}
+
+body {
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+}
+
+
+/*header*/
+header {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 60px; 
+    border: 1px solid white;
+    z-index: 3;
+}
+
+nav a {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+
+header ul {
+    list-style-type: none;
+    float: right;
+}
+
+.logo {
+    height: 45px;
+    margin: 5px 10px;
+}
+
+.menu {
+    height: 25px;
+    margin: -40px 10px;
+    
+
+}
+
+header img {
+    display: flex;
+    justify-content: flex-end;
+}
+/*____________________________h1___________________________*/
+h1 {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    margin: 10px 0px;
+}
+
+
+/*main section*/
+/*____________________________h2___________________________*/
+h2 {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline;
+    padding: 50px 10px;
+}
+.background{
+    background-image: url(../img/smoke.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 120px;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 200px auto;
+    height: calc(100vh - 110);
+    width: 75%;
+    z-index: 2;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #131313;
+}
+
+section:nth-of-type(1) {
+    color: white;
+}
+
+
+/*article*/
+article {
+    background-color: black;
+    width: 80%;
+}
+/*____________________________h3___________________________*/
+h3 {
+    background-color: #131313;
+    color: #0090FF;
+    padding: 30px 0 10px 15px;
+    font-size: 16px;
+    text-align: center;
+}
+
+section p {
+    background-color: black;
+    line-height: 160%;
+    font-size: 16px;
+    padding: 20px 20px;
+}
+
+.contrast {
+    width: 50%;
+    margin: 10px 20px;
+}
+
+/*article div*/
+.textborder {
+    border: 1px solid grey;
+}
+
+.footer{
+    background-color: black;
+    position:relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 100px; 
+    border: 1px solid white;
+    z-index: 4;
+    margin-top: -200px;
+}
+
+@media screen and (min-width: 900px) {
+    h2{
+        font-size: 40px;
+        padding: 70px 0;
+        
+    }
+    .background{
+        min-height: 200px;
+    }
+    h3{
+        font-size: 30px;
+    }
+    section p {
+        font-size: 19px;
+    }
+    
+}

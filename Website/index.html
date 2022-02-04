@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="da-dk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/browser.png" type="image/png">
+    <title>Tilgængelighed | Markaija</title> <!--Markaija is my wesbite-->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img class="logo" src="img/logo60.png" alt="logo">
+                <!--h1-->
+                <h1>Accessibility</h1>
+            </a>
+            <ul>
+                <li><img class="menu" src="img/menu.png" alt="menu"></li>
+            </ul>
+        </nav>
+    </header>
+<!--Image of blue smoke-->
+    <div class="background"></div>
+
+    <main>
+        <section>
+            <!--h2-->
+            <h2>Sådan laver du en let tilgængelig hjemmeside</h2>
+
+            <article>
+                <h3>Hvad er tilgængelighed?</h3>
+                <div class="textborder">
+                   <p>Webtilgængelighed har til formål at gøre internettets mange hjemmesider let tilgængelige og 
+                    give de rette informationer, uanset hvilken endhed de bruger eller hvilken funktionsnedsættelse 
+                    de måtte have, samt software som kan anvendes i forbindelse med et handicap.</p> 
+                
+                    <p>Hjemmesider med utilpas tilgængelighed vil formindske brugervenlighed og dermed gøre det
+                    svære at anvende for individer med et eller flere handicap.</p>
+                </div>
+            </article>
+
+            <article>
+                <h3>Responsivt web design, flexbox og grid</h3>
+                <div class="textborder"><!--class for border-->
+                    <p>Din hjemmeside skal kunne tilpasse sig på skærme af forskellige størrelse, heraf telefoner, computere 
+                    og fjernsyn, så hjemmesiden kan anvendes uanset hvilken enhed brugeren har. </p>
+                    
+                    <p>For at din hjemmeside skal tilpasse sig alle enheder, kan du bruge <span style="color:yellow">RWD</span>.
+                    Dette giver et flexibelt layout, som hurtigt tilpasser sig skærmstørrelsen.</p>
+
+                    <p>Alle hjemmesider anvender <span style="color:yellow">Meta Viewport</span>, et tag som får hjemmesidens størrelse til at ændre sig alt 
+                    efter enheden. Det indsættes i din HTML-fil i Head og er ikke en synlig del af hjemmesiden for brugeren. 
+                    Hjemmesiden vil også være responsiv over for media.</p>
+                    
+                    <p>&lt;head&gt;</p>
+
+                        <p>&lt;meta charset="UTF-8"&gt;</p>
+
+                        <p>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</p>
+
+                        <p><span style="color:yellow">&lt;meta name="viewport" content="width=device-width;intial-scale=1.0"&gt;</span></p>
+
+                        <p>&lt;title&gt;&lt;/title&gt;</p>
+
+                    <p>&lt;head&gt;</p>
+
+                    <p><span style="color:yellow">Media</span> kan hjælpe med at ændre hjemmesiden, når skærmstørrelsen ændres. Hvis skriftstørrelsen er tilpas på en computer,
+                    men for stor på en mobil, vil tekstørrelsen kunne tilpasse sig med media, det same gælder for billeder og bokse.</p>
+                        
+                    <p>For at kunne bruge media, skal du indsætte det i CSS. Media går ud fra den største skærmstørrelsen, og derfor indsættes de højeste
+                    værdier inde i media, mens de mindste værdier er udenfor. Typisk placeres media nederst i dit stylesheet.</p>
+
+                    <p>.example {</p>
+                        <p><span style="color:yellow">font-size: 16px;</span></p>
+                    <p>}</p>
+                       
+                    <p><span style="color:yellow">@media screen and (min-width: 750px)</span> {</p>
+                        <p>.example {</p>
+                            <p><span style="color:yellow">font-size: 25px;</span></p>
+                        <p>}</p>
+                    <p>}</p>
+                       
+                    <p>Vær også opmærksom på, at media kun vil virke, hvis koden har samme navn inde i og uden for media.</p>
+
+                    <p><span style="color:yellow">Min-width</span> bestemmer den minimale størrelse, hvoraf dine større værdier tages i brug. De mobile værdier vil 
+                    derfor ikke ændres, før skærmen er på 750px eller større. Det er dog op til dig.</p>
+                </div>
+                <div class="textborder">
+                    <p><span style="color:yellow">Flexbox</span> anvendes på responsive hjemmesider til at lave flexible gitter, dog på en anden måde end grid.</p>
+
+                    <p>For at kunne bruge flexbox i CSS, skal du først starte med at bruge display, ellers synliggøres det ikke. Display giver 
+                    mulighed for at ændre højden, bredden og opstilningen af elementer til bedst muligt at tilpasse sig forskellige enheder.</p>
+
+                    <p>Du kan ændre i opstilningen af elementerne i en article eller section med <span style="color:yellow">flex-direction</span>. Heraf kan du vælge mellem 
+                    4 opstilninger.</p>
+
+                    <p><span style="color:yellow">Column</span>: vandret kolonne fra venstre til højre</p>
+
+                    <p><span style="color:yellow">Column-reverse</span>: vandret kolonne fra højre til venstre</p>
+
+                    <p><span style="color:yellow">Row</span>: lodret række fra top til bund</p>
+
+                    <p><span style="color:yellow">Row-reverse</span>: lodret række fra bund til top</p>
+
+                    <p>section {</p>
+                    
+                    <p><span style="color:yellow">display: flex;</span></p>
+                    
+                    <p><span style="color:yellow">flex-direction: row;</span></p>
+
+                    <p>}</p>
+
+                    <p>Hvis du har flere elementer, sections eller articles, har du mulighed for at bruge <span style="color:yellow">flex-wrap</span>. 
+                    Dette kan placere elementer på flere linjer eller sørge for at elementer forbliver på en linje. </p>
+
+                    <p><span style="color:yellow">Wrap</span>: elementer med flex vil flytte sig ned på flere linjer</p>
+
+                    <p><span style="color:yellow">Nowrap</span>: alle elementer forbliver på samme linje</p>
+
+                    <p><span style="color:yellow">Wrap-reverse</span>: elementer flyttes fra bund til top på flere linjer</p>
+                </div>
+                <div class="textborder">
+                    <p>Derudover kan du bruge <span style="color:yellow">justify-content</span> og <span style="color:yellow">align-content</span>, 
+                    som kan ændre på placering og mellemrum af dine elementer. Justify-content opstiller elementer på den vandrette akse, 
+                    mens align-content opstiller dem på den lodrette akse. Indenfor flexbox kan align-items også anvendes.</p>
+
+                    <p><span style="color:yellow">Start</span>: element placeret øverst</p>
+
+                    <p><span style="color:yellow">End</span>: element placeret nederst</p>
+
+                    <p><span style="color:yellow">Right</span>: element placeret til højre</p>
+
+                    <p><span style="color:yellow">Left</span>: element placeret til venstre</p>
+
+                    <p><span style="color:yellow">Center</span>: element centreret på siden</p>
+
+                    <p><span style="color:yellow">Flex-start</span>: elementer placeres i starten af flex-direction</p>
+
+                    <p><span style="color:yellow">Flex-end</span>: elementer elementer placeres til sidst af flex-direction</p>
+
+                    <p><span style="color:yellow">Space-between</span>: mellemrum mellem elementer</p>
+
+                    <p><span style="color:yellow">Space-evenly</span>: elementer centreret med mellemrum</p>
+
+                    <p><span style="color:yellow">Space-around</span>: mellemrum rundt om elementerne</p>
+
+                    <p><span style="color:yellow">Stretch</span>: strækker elementer for at udfylde gitteret</p>
+
+                    <p>.example {</p>
+
+                    <p>display: grid;</p>
+
+                    <p><span style="color:yellow">justify-content</span>: center;</p>
+
+                    <p><span style="color:yellow">align-content</span>: center;</p>
+
+                    <p>}</p>
+
+                    <p>Det er dog anbefalet kun at bruge flex-start, flex-end og center, grundet mangel på browser understøttelse. </p>
+
+                    <p>Justify-content kan også bruges til undgå at elementer placeres udenfor skærmen ved brug af 
+                    <span style="color:yellow">safe</span> og <span style="color:yellow">unsafe</span>.</p>
+                </div>
+                <div class="textborder">
+                    <p>Hvis du ønsker at opsætte dine elementer i et gitter, kan du bruge <span style="color:yellow">grid</span>. Ligesom med flexbox skal grid aktiveres med display. 
+                    Grid gør det muligt at gruppere elementer indenfor bokse på din hjemmeside, ændre på mellemrum og hvor elementer er placeret
+                    i forhold til hinanden.</p>
+
+                    <p><span style="color:yellow">Grid</span>: opstiller elementer i kasser</p>
+
+                    <p><span style="color:yellow">Inline-grid</span>: opstiller elementer på linje</p>
+
+                    <p>Heraf kan du bruge <span style="color:yellow">grid-template-columns</span> og <span style="color:yellow">grid-template-rows</span> til at skabe et layout for dit gitter med bestemte værdier i CSS. 
+                    Der er mange forskellige værdier, som kan anvendes med grid-template, så som px, %, fr og auto. Et gitter er bygget op af vandrette 
+                    og lodrette linjer, som hver især kan have navne og værdier.</p>
+
+                    <p>.example {</p>
+
+                    <p><span style="color:yellow">grid-template-columns:  20px auto 50% 3fr;</span></p>
+
+                    <p>}</p>
+
+                    <p>I tilfælde af et din definition indeholder gentagende værdier, er det også muligt at bruge <span style="color:yellow">repeat</span>. Med repeat kan du også bruge 
+                    normale tal som en værdi.</p>
+
+                    <p>.example {</p>
+
+                    <p><span style="color:yellow">grid-template-columns: repeat (2, 30px [col-start]);</span></p>
+
+                    <p>}</p>
+                </div>
+                <h3>Billeder</h3>
+                <div class="textborder">
+                    <p>Når du skal lave en hjemmeside, er der typisk et krav om billeder. Det er vigtigt at have fleksible billeder, som kan tilpasse sig 
+                    diverse skærmstørrelser. Værdier som px er ikke fleksibelt og vil give billedet en bestemt størrelse, som forbliver den samme
+                    på alle enheder, derfor kan du anvende <span style="color:yellow">max-width</span> i CSS.</p>
+
+                    <p>img {</p>
+
+                    <p><span style="color:yellow">max-width: 100%;</span></p>
+
+                    <p>}</p>
+
+                    <p>Du kan også anvende media til at skifte størrelsen på dit logo eller ikoner.</p>
+                </div>
+                <div class="textborder">
+                    <p>Dog skal billeder muligvis ikke kun være fleksible, men også være tilgængelige for diverse målgrupper, som ønsker at bruge
+                    internettet og din hjemmeside. Individer med <span style="color:yellow">farveblindhed</span> ser færre farver, som i stedet vil vise sig i grå eller brune toner. 
+                    Personer, som ikke kan se rød, vil heller ikke se farver som er skabt ved blanding af rød. De kan altså ikke se lilla eller orange.
+                    For at opnå den bedste brugervenlighed, undgå at placerer tekst på billeder, med mindre der er god kontrast.</p>
+    
+                    <p>Nogle brugere vil også være <span style="color:yellow">svagtseende</span> eller <span style="color:yellow">blinde</span>. Der er generelt et krav om at angive navne på billeder, selv hvis hjemmesiden 
+                    ikke er egnet til blinde brugere. er det del af let tilgængelighed, i tilfælde af at et billede ikke kommer frem eller hvisen bruger har 
+                    behov for hjælp til at navigere hjemmesiden.</p>
+    
+                    <p>For at give dit billede et navn skal du bruge alt i din img kode i HTML.</p>
+    
+                    <p>&lt;div&gt;</p>
+
+                    <p><span style="color:yellow">&lt;img src="" alt="name"&gt;</span></p>
+
+                    <p>&lt;/div&gt;</p>
+
+                </div>
+                <h3>Teksttyper og kontrast</h3>
+                <div class="textborder">
+                    <p>Når du skal indsætte tekst på din hjemmeside, er det en god idé at bruge <span style="color:yellow">let læselig tekst</span>, så enhver bruger kan læse det. 
+                    Nogle teksttyper er ikke velegnet til en hjemmeside med tilgængelighed i tanke, eftersom brugeren kan være ordblind.</p>
+
+                    <p>Typisk anvendes simple teksttyper så som Ariel, hvor bogstaverne er lette at skælne mellem og ikke står for tæt sammen.
+                    Der findes også teksttyper, som er tilpasset ordblindhed.</p>
+
+                    <p>For at kunne ændre teksten på din hjemmeside, kan du bruge family-font i CSS, enten på body for at ændre al tekst eller ændre
+                    en bestemt section eller specifikt element.</p>
+
+                    <p>body {</p>
+
+                    <p>family-font: Arial, Helvetica, sans-serif;</p>
+
+                    <p>}</p>
+                </div>
+                <div class="textborder">
+                    <p>Undgå at bruge italic og streger i din tekst, da det kan være svært at læse, hvis med en brugervenlig tekstskrift.</p>
+
+                    <p>I tilfælde af, at dit program ikke har den ønskede tekst, kan du også bruge teksttyper fra Google og Adobe.</p>
+
+                    <p>Derudover kan tekst placeret ovenpå billeder være svært at se for svagtseende personer, især ved dårlig kontrast. Farveblinde 
+                    personer er sensitive overfor dårlig kontrast. Gul tekst på en lysegrøn baggrund kan ses af normale brugere, men skaber stadig 
+                    general dårlig kontrast og vil være umuligt at læse for nogle farveblinde personer.</p>
+
+                    <img class="contrast" src="img/bad_contrast.png" alt="Dårlig_kontrast">
+                    <img class="contrast" src="img/good_contrast.png" alt="God_kontrast">
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+    </footer>
+</body>
+</html>
